@@ -1,6 +1,4 @@
-import type { NextPage } from "next";
 import NextLink from "next/link";
-import styles from "../styles/Home.module.css";
 import { ColorH3, Paragraph } from "../components/Paragraph";
 import { ProjectCard } from "../components/ProjectCard";
 import { Link, Grid, Text } from "@nextui-org/react";
