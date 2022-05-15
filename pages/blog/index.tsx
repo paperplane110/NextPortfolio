@@ -27,13 +27,13 @@ export function BlogCard({ id, title, description, date }: blogCardProps) {
     <div className={styles.blogCard}>
       <NextLink href={`/blog/${id}`}>
         <div className={styles.blogDescription}>
-          <Text weight="semibold" css={{}}>
+          <Text h4 weight="semibold">
             {title}
           </Text>
-          <Text color="grey" css={{ mt: "$2" }}>
+          <Text weight="medium" color="grey" css={{ mt: "$2" }}>
             {description}
           </Text>
-          <Text color="grey" size="small">
+          <Text  color="grey">
             {dateFormated}
           </Text>
         </div>

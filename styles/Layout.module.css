@@ -6,7 +6,7 @@
 }
 
 .content {
-    padding: 4rem 2rem 10rem 2rem;
+    padding: 4rem 2rem 8rem 2rem;
     display: flex;
     flex-direction: column;
     width: 800px;
@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 800px) {
     .content {
-        padding: 4rem 1rem 5rem 1rem;
+        padding: 4rem 1rem 10rem 1rem;
         max-width: 500px;
     }
 }
@@ -24,7 +24,7 @@
 
 @media screen and (max-width: 500px) {
     .content {
-        padding: 4rem 1rem 5rem 1rem;
+        padding: 4rem 2rem 8rem 2rem;
         max-width: 390px;
     }
 }

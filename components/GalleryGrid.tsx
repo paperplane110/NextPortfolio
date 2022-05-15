@@ -34,7 +34,7 @@ export default function GalleryGrid({ picList, gap }: GalleryGridProps) {
       justify="center"
     >
       {picList.map(({ width, pic }, idx) => (
-        <Grid key={idx} xs={width}>
+        <Grid key={idx} xs={width} sm={width} md={width}>
           <div className={styles.galleryGrid}>
             <NaturalImage src={pic} />
           </div>

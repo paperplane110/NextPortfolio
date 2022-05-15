@@ -86,7 +86,7 @@ function Home({ first3BlogData }: homePageProps) {
           justify="center"
         >
           {first3BlogData.map(({ id, date, title, description }, idx) => (
-            <Grid key={idx} xs={4}>
+            <Grid key={idx} xs={12} sm={4}>
               <BlogCard
                 id={id}
                 title={title}
@@ -120,7 +120,7 @@ function Home({ first3BlogData }: homePageProps) {
         >
           {projectList.map(({ name, description, link }, idx) => {
             return (
-              <Grid key={idx} xs={6}>
+              <Grid key={idx} xs={12} sm={12}>
                 <ProjectCard
                   name={name}
                   description={description}
