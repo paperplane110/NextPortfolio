@@ -29,7 +29,6 @@ export default function Layout({ children }: LayoutProps) {
   const routerPath = router.asPath
   const rootPath = `/${routerPath.split('/')[1]}`
   let titleName = routerPath2HeadName[rootPath]
-  console.log(titleName, rootPath)
   if (!titleName) {titleName = "404"}
 
   return (

@@ -1,8 +1,6 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
 
 const blogDirectory = path.join(process.cwd(), "blog");
 
@@ -70,16 +68,10 @@ export async function getBlogData(id: string) {
   // get metadata from md
   const matterResult = matter(fileContents)
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content)
-  const contentHtml = processedContent.toString()
-
   return {
     id,
     date: matterResult.data.date,
-    contentHtml,
+    content: matterResult.content,
     ...matterResult.data,
   }
 }

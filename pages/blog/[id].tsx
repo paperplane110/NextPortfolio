@@ -1,6 +1,8 @@
 import { getAllBlogIds, getBlogData } from "../../lib/blog";
 import { ColorH2 } from "../../components/Paragraph";
+import ReactMarkdown from "react-markdown";
 import Date from "../../components/date";
+import styles from "../../styles/Blog.module.css";
 
 export async function getStaticPaths() {
   const paths = getAllBlogIds();
@@ -27,7 +29,7 @@ type blogPageProps = {
   blogData: {
     title: string;
     date: string;
-    contentHtml: string;
+    content: string;
   };
 };
 
@@ -35,9 +37,11 @@ export default function Blog({ blogData }: blogPageProps) {
   return (
     <div>
       <ColorH2>{blogData.title}</ColorH2>
-      <br />
       <Date dateString={blogData.date} />
-      <div dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />
+      <br />
+      <div className={styles.mdStyle}>
+        <ReactMarkdown>{blogData.content}</ReactMarkdown>
+      </div>
     </div>
   );
 }

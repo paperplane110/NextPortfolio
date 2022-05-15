@@ -1,0 +1,36 @@
+.blogCard {
+    /* display: flex;
+    flex-direction: column; */
+    border: 1px dashed rgba(209, 209, 209, 0.5);
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.blogCard:hover {
+    background: linear-gradient(145deg, rgba(248, 142, 242, 0.05) 0%, rgba(70, 98, 253, 0.05) 100%);
+}
+
+.blogIcon {
+    margin-left: 1rem;
+    width: 4rem;
+}
+
+.blogDescription {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1.5rem
+}
+
+.mdStyle {
+    padding: 1.5rem;
+    border: 1px dashed rgba(209, 209, 209, 0.8);
+    border-radius: 2rem;
+    box-shadow: 0 5px 20px rgba(20, 20, 20, 0.15);
+    transition: box-shadow 0.2s ease-in-out
+}
+
+.mdStyle:hover {
+    box-shadow: 0 5px 20px -5px rgba(20, 20, 20, 0.0);
+}

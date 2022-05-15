@@ -12,13 +12,13 @@ const Footer = () => {
           <Text size="small" weight="bold">Powered by</Text>
           <Text size="small" weight="bold" color="white">i</Text>
           <Text size="small" weight="bold" css={{ textGradient: "45deg, $pink600 -20%, $blue600 100%" }}>
-            <Link href="https://nextjs.org/">Next.js</Link> 
+            <Link href="https://nextjs.org/" target="_blank">Next.js</Link> 
           </Text>
           <Text size="small" weight="bold" color="white">i</Text>
           <Text size="small" weight="bold">&</Text>
           <Text size="small" weight="bold" color="white">i</Text>
           <Text size="small" weight="bold" css={{ textGradient: "45deg, $pink600 -20%, $yellow600 100%" }}>
-            <Link href="https://nextui.org/">NextUI</Link>
+            <Link href="https://nextui.org/" target="_blank">NextUI</Link>
           </Text>
         </div>
       </div>

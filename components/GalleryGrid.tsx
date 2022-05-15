@@ -13,7 +13,7 @@ const NaturalImage = (props: ImageProps) => {
       {...props}
       // set the dimension (affected by layout)
       className={styles.childPic}
-      quality="high"
+      quality="medium"
       layout="responsive" // you can use "responsive", "fill" or the default "intrinsic"
       placeholder="blur"
     />

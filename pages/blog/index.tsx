@@ -3,7 +3,7 @@ import { Grid, Text } from "@nextui-org/react";
 import { Paragraph } from "../../components/Paragraph";
 import { getSortedBlogData } from "../../lib/blog";
 import { parseISO, format } from "date-fns";
-import styles from "../../styles/BlogIndex.module.css";
+import styles from "../../styles/Blog.module.css";
 
 export async function getStaticProps() {
   const allBlogData = getSortedBlogData();
@@ -23,17 +23,23 @@ export type blogCardProps = {
 
 export function BlogCard({ id, title, description, date }: blogCardProps) {
   const dateFormated = format(parseISO(date), "LLLL d, yyyy");
+  // let shortTitle;
+  // if (title.length >= 30) {
+  //   shortTitle = `${title.slice(0, 27)}...`;
+  // } else {
+  //   shortTitle = title;
+  // }
   return (
     <div className={styles.blogCard}>
       <NextLink href={`/blog/${id}`}>
         <div className={styles.blogDescription}>
-          <Text h4 weight="semibold">
+          <Text h4 weight="medium">
             {title}
           </Text>
           <Text weight="medium" color="grey" css={{ mt: "$2" }}>
             {description}
           </Text>
-          <Text  color="grey">
+          <Text color="grey">
             {dateFormated}
           </Text>
         </div>
