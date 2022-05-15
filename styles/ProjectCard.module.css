@@ -1,0 +1,25 @@
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed rgba(209, 209, 209, 0.5);
+    border-radius: 2rem;
+    width: 100%;
+    min-height: 6rem;
+    /* transition: box-shadow 0.1s ease-in-out; */
+}
+
+.projectCard:hover {
+    opacity: 1;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19);
+    background: rgb(224, 95, 219); */
+    background: linear-gradient(145deg, rgba(248, 142, 242, 0.05) 0%, rgba(70, 98, 253, 0.05) 100%);
+}
+
+.projectIcon {
+    margin-left: 1rem;
+    width: 4rem;
+}
+
+.projectDescription {
+    padding: 1rem 2rem
+}
