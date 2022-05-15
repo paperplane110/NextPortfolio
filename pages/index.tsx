@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { ColorH3, Paragraph } from "../components/Paragraph";
+import { ColorH2, Paragraph } from "../components/Paragraph";
 import { ProjectCard } from "../components/ProjectCard";
 import { Link, Grid, Text } from "@nextui-org/react";
 import GalleryGrid from "../components/GalleryGrid";
@@ -79,7 +79,7 @@ function Home({ first3BlogData }: homePageProps) {
         </Paragraph>
       </div>
       <div>
-        <ColorH3>Blog.</ColorH3>
+        <ColorH2>Blog.</ColorH2>
         <Grid.Container
           css={{ padding: "0", mt: "$10" }}
           gap={1}
@@ -104,7 +104,7 @@ function Home({ first3BlogData }: homePageProps) {
           }}
         >
           <NextLink href="/blog">
-            <Link color="primary" block>
+            <Link color="secondary" block>
               <Text h4>... to read more articals ✍️</Text>
             </Link>
           </NextLink>
@@ -112,7 +112,7 @@ function Home({ first3BlogData }: homePageProps) {
       </div>
 
       <div>
-        <ColorH3>Projects.</ColorH3>
+        <ColorH2>Projects.</ColorH2>
         <Grid.Container
           css={{ padding: "0", mt: "$10" }}
           gap={1}
@@ -120,7 +120,7 @@ function Home({ first3BlogData }: homePageProps) {
         >
           {projectList.map(({ name, description, link }, idx) => {
             return (
-              <Grid key={idx} xs={12} sm={12}>
+              <Grid key={idx} xs={12} sm={6}>
                 <ProjectCard
                   name={name}
                   description={description}
@@ -133,7 +133,7 @@ function Home({ first3BlogData }: homePageProps) {
       </div>
 
       <div>
-        <ColorH3>Photos & 3D Arts.</ColorH3>
+        <ColorH2>Photos & 3D Arts.</ColorH2>
         <GalleryGrid picList={picList} gap={1} />
         <div
           style={{
@@ -143,7 +143,7 @@ function Home({ first3BlogData }: homePageProps) {
           }}
         >
           <NextLink href="/gallery">
-            <Link color="primary" block>
+            <Link color="secondary" block>
               <Text h4>... to see more pictures 🖼️</Text>
             </Link>
           </NextLink>

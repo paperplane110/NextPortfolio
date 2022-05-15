@@ -1,5 +1,5 @@
 import { getAllBlogIds, getBlogData } from "../../lib/blog";
-import { ColorH3 } from "../../components/Paragraph";
+import { ColorH2 } from "../../components/Paragraph";
 import Date from "../../components/date";
 
 export async function getStaticPaths() {
@@ -34,7 +34,7 @@ type blogPageProps = {
 export default function Blog({ blogData }: blogPageProps) {
   return (
     <div>
-      <ColorH3>{blogData.title}</ColorH3>
+      <ColorH2>{blogData.title}</ColorH2>
       <br />
       <Date dateString={blogData.date} />
       <div dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />

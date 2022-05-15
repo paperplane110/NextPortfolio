@@ -22,10 +22,10 @@ export function Paragraph({ children, size }: paragraphProps) {
 
 type colorHeaderProps = { children: string };
 
-export function ColorH3({ children }: colorHeaderProps) {
+export function ColorH2({ children }: colorHeaderProps) {
   return (
     <Text
-      h3
+      h2
       weight="bold"
       css={{ textGradient: "45deg, $pink600 -20%, $blue600 50%", mt: "2rem", letterSpacing: "$1" }}
       // css={{ textGradient: "45deg, $pink600 -20%, $blue600 50%", mt: "2rem" }}
