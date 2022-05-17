@@ -3,6 +3,7 @@ import { ColorH2 } from "../../components/Paragraph";
 import ReactMarkdown from "react-markdown";
 import Date from "../../components/date";
 import styles from "../../styles/Blog.module.css";
+import BlogMarkdown from "../../components/Markdown"
 
 export async function getStaticPaths() {
   const paths = getAllBlogIds();
@@ -40,7 +41,7 @@ export default function Blog({ blogData }: blogPageProps) {
       <Date dateString={blogData.date} />
       <br />
       <div className={styles.mdStyle}>
-        <ReactMarkdown>{blogData.content}</ReactMarkdown>
+        <BlogMarkdown markdown={blogData.content} />
       </div>
     </div>
   );
