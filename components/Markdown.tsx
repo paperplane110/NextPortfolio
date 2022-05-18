@@ -108,7 +108,12 @@ export default function BlogMarkdown({ markdown }: blogMarkdownProps) {
           const href: string = node.properties["href"];
           if (href.startsWith("http"))
             return (
-              <a className={styles.mdLink} href={href} target="_blank">
+              <a
+                className={styles.mdLink}
+                href={href}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 {children}🔗
               </a>
             );

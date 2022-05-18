@@ -44,7 +44,7 @@ const Gallery: NextPage = () => {
       <Paragraph>
         From academic to impressionism, from photographs to 3D arts, here
         collects all of my favorite artworks, photos, game scenes, and 3D arts.
-        Vibrant green, sweet pink, warmly orange, rustic black & white, that's
+        Vibrant green, sweet pink, warmly orange, rustic black &apos; white, that's
         all about life.
       </Paragraph>
       <blockquote>
