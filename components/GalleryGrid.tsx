@@ -5,6 +5,7 @@ import styles from "../styles/GalleryGrid.module.css";
 
 type ImageProps = {
   src: string | StaticImageData;
+  alt: string
 };
 
 const NaturalImage = (props: ImageProps) => {
@@ -36,7 +37,7 @@ export default function GalleryGrid({ picList, gap }: GalleryGridProps) {
       {picList.map(({ width, pic }, idx) => (
         <Grid key={idx} xs={width} sm={width} md={width}>
           <div className={styles.galleryGrid}>
-            <NaturalImage src={pic} />
+            <NaturalImage alt={`image${idx}`} src={pic} />
           </div>
         </Grid>
       ))}

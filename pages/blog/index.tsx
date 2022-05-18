@@ -23,12 +23,12 @@ export type blogCardProps = {
 
 export function BlogCard({ id, title, description, date }: blogCardProps) {
   const dateFormated = format(parseISO(date), "LLLL d, yyyy");
-  // let shortTitle;
-  // if (title.length >= 30) {
-  //   shortTitle = `${title.slice(0, 27)}...`;
-  // } else {
-  //   shortTitle = title;
-  // }
+  let shortTitle;
+  if (title.length >= 40) {
+    shortTitle = `${title.slice(0, 37)}...`;
+  } else {
+    shortTitle = title;
+  }
   return (
     <div className={styles.blogCard}>
       <NextLink href={`/blog/${id}`}>

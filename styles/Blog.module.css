@@ -7,7 +7,8 @@
 }
 
 .blogCard:hover {
-    background: linear-gradient(145deg, rgba(248, 142, 242, 0.05) 0%, rgba(70, 98, 253, 0.05) 100%);
+    background: linear-gradient( 145deg, rgba(248, 142, 242, 0.05) 0%, rgba(70, 98, 253, 0.05) 100%);
+    cursor: pointer;
 }
 
 .blogIcon {
@@ -20,7 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1rem 1.5rem
+    padding: 1rem 1.5rem;
 }
 
 .mdStyle {
@@ -28,11 +29,37 @@
     border: 1px dashed rgba(209, 209, 209, 0.8);
     border-radius: 2rem;
     box-shadow: 0 5px 20px rgba(20, 20, 20, 0.15);
-    transition: box-shadow 0.2s ease-in-out
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .mdStyle:hover {
-    box-shadow: 0 5px 20px -5px rgba(20, 20, 20, 0.0);
+    box-shadow: 0 5px 20px -5px rgba(20, 20, 20, 0);
+}
+
+.mdLink {
+    /* display: inline-block; */
+    background-color: var(--nextui-colors-selection);
+    padding: var(--nextui-space-1) var(--nextui-space-2);
+    border-radius: var(--nextui-radii-xs);
+}
+
+.mdLink:hover {
+    opacity: 0.8;
+}
+
+.mdCodeStyle {
+    padding: 1rem !important;
+    background-color: transparent !important;
+    border: 1px dashed rgb(218, 218, 218);
+    border-radius: 1rem;
+}
+
+.postImgWrapper {
+    margin-bottom: 1rem;
+}
+
+.postImg {
+    border-radius: 1rem;
 }
 
 .mdCaption {
