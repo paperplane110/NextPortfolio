@@ -17,6 +17,7 @@ const NaturalImage = (props: ImageProps) => {
       quality="medium"
       layout="responsive" // you can use "responsive", "fill" or the default "intrinsic"
       placeholder="blur"
+      priority={true}
     />
   );
 };
