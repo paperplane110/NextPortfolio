@@ -1,6 +1,5 @@
 import { getAllBlogIds, getBlogData } from "../../lib/blog";
 import { ColorH2 } from "../../components/Paragraph";
-import ReactMarkdown from "react-markdown";
 import Date from "../../components/date";
 import styles from "../../styles/Blog.module.css";
 import BlogMarkdown from "../../components/Markdown"
