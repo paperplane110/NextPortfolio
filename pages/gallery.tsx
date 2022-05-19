@@ -14,7 +14,7 @@ import classicCouplePic from "../public/gallery/classic-couple.jpeg";
 import fourShoesPic from "../public/gallery/four-shoes.jpeg";
 import grassInSummerPic from "../public/gallery/grass-in-summer.jpeg";
 import greenMossPic from "../public/gallery/green-moss.jpeg";
-import lilyRosePic from "../public/gallery/mone-night.jpeg";
+import lilyRosePic from "../public/gallery/lili-rose.jpeg";
 import marioMoonPic from "../public/gallery/mario-moon.jpeg";
 import yiheyuanPic from "../public/gallery/yiheyuan.jpeg";
 import travelStatuePic from "../public/gallery/travel-statue.jpeg";

@@ -37,7 +37,7 @@ repellendus
 
 ## Link
 
-链接会自动识别室内部还是外部链接，并且自动添加小图标
+链接会自动识别是内部还是外部链接，并且自动添加小图标
 - 网站内部链接 [Back-to-home](/)
 - 网站内部链接 [To-gallery](/gallery)
 - 网站外部链接 [Nextjs](https://nextjs.org/)
@@ -48,7 +48,7 @@ repellendus
 
 ## Code block
 
-代码库支持的语言为：`ts`, `tsx`, `js`, `jsx`, `bash`, `markdown`, `java`, `python`, `cpp`, `json`, `scss`
+代码块高亮支持的语言为：`ts`, `tsx`, `js`, `jsx`, `bash`, `markdown`, `java`, `python`, `cpp`, `json`, `scss`
 
 ```python
 import random
