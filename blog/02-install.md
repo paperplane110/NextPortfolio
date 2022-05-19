@@ -1,6 +1,6 @@
 ---
-title: "How set up NextPortfolio"
-description: "a tutorial on building your website with Next-Portfolio"
+title: "How To Set Up NextPortfolio"
+description: "A tutorial about building your website with Next-Portfolio"
 date: "2022-05-16"
 ---
 
