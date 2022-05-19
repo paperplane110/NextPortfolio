@@ -8,10 +8,6 @@
     justify-content: center;
 }
 
-.logo {
-    height: 1em;
-    margin-left: 0.5rem;
-}
 
 @media (max-width: 600px) {
     .grid {
@@ -20,27 +16,24 @@
     }
 }
 
-.projectCard {
-    display: flex;
-    align-items: center;
-    border: 1px solid rgba(163, 163, 163, 0.5);
-    border-radius: 30px;
-    width: 100%;
-    height: 6rem;
-    transition: box-shadow 0.15s ease-in-out;
+.waving {
+    display: inline-block;
+    font-size: 1.5rem;
+    animation: hello 2s infinite
 }
 
-.projectCard:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19);
-}
+@keyframes hello {
+    25% {
+        transform: rotate(15deg);
+    }
 
-.projectIcon {
-    margin-left: 1rem;
-    width: 4rem;
-}
+    50% {
+        transform: rotate(-20deg);
+    }
 
-.projectDescription {
-    padding-left: 20px;
+    75% {
+        transform: rotate(5deg);
+    }
 }
 
 .galleryGrid {

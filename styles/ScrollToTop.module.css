@@ -1,0 +1,28 @@
+.topToBtm {
+    position: relative;
+}
+
+.iconBox {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    z-index: 20;
+    border: 1px dashed rgba(159, 159, 159, 0.8);
+    border-radius: 1rem;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconBox:hover {
+    animation: none;
+    color: #fff;
+    border: 0;
+    box-shadow: 0 10px 20px rgba(20, 20, 20, 0.2);
+    background: rgb(238, 174, 202);
+    background: linear-gradient(145deg, rgba(250, 182, 245, 0.69) 0%, rgba(102, 80, 246, 0.65) 50%, rgba(21, 152, 253, 0.66) 100%);
+}

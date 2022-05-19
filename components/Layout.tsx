@@ -6,6 +6,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { navBarSetting } from "../NavBarSetting";
 import { Text } from "@nextui-org/react";
+import ScrollToTop from "./ScrollToTop"
 
 type rp2hn = {
   [key: string]: string;
@@ -42,6 +43,7 @@ export default function Layout({ children }: LayoutProps) {
       <div className={styles.main}>
         <NavBar />
         <div className={styles.content}>
+          <ScrollToTop />
           <div style={{ display: "flex" }}>
             <Text h1> {titleName}</Text>
             <Text

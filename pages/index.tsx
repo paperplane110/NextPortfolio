@@ -12,6 +12,8 @@ import { getSortedBlogData } from "../lib/blog";
 import { BlogCard } from "./blog/index";
 import type { blogCardProps } from "./blog/index";
 
+import styles from "../styles/Home.module.css"
+
 const projectList = [
   {
     name: "Data Manager",
@@ -60,7 +62,7 @@ function Home({ first3BlogData }: homePageProps) {
   return (
     <div>
       <div>
-        <Paragraph>Hi! I&apos;m Tianyu 👋</Paragraph>
+        <Paragraph>Hi! I&apos;m Tianyu <span className={styles.waving}>👋</span></Paragraph>
         <Paragraph>
           I&apos;m a Software Engineer in Test(SET) in Beijing. I&apos;m
           interested in Full-Stack technology, UI design, and 3D arts.
