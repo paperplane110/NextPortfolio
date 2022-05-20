@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: TianyuYuan
+ * @Date: 2022-05-20 21:14:14
+ * @LastEditors: TianyuYuan
+ * @LastEditTime: 2022-05-20 22:17:41
+ */
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -59,6 +67,29 @@ export function getAllBlogIds() {
       },
     };
   });
+}
+
+function getMetaInfo(id: string) {
+  const metaInfo = 0 // @note ! Need complete
+  return metaInfo
+}
+
+export function getPreviousNextIds(id: string) {
+  // get ordered blog ids
+  const allFileNames = fs.readdirSync(blogDirectory);
+  const allIds = allFileNames.map((fileName) => (fileName.replace(/\.md$/, "")))
+  const orderedIds = allIds.sort()
+  const nextIndex = orderedIds.indexOf(id) + 1
+  const previousIndex = orderedIds.indexOf(id) - 1
+  let nextId = ""
+  let previousId = ""
+  if (nextIndex < orderedIds.length) nextId = orderedIds[nextIndex]
+  if (previousIndex >= 0) previousId = orderedIds[previousIndex]
+
+  return {
+    nextId,
+    previousId,
+  }
 }
 
 export async function getBlogData(id: string) {

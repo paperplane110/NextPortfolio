@@ -67,3 +67,14 @@
     text-align: center;
     color: rgba(52, 52, 52, 0.6);
 }
+
+.paginationBtm {
+    border: 1px dashed lightgrey;
+    box-shadow: 0 5px 20px rgba(20, 20, 20, 0.15);
+    transition: box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.paginationBtm:hover {
+    box-shadow: 0 5px 20px -5px rgba(20, 20, 20, 0);
+}

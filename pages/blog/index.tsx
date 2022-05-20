@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: TianyuYuan
+ * @Date: 2022-05-20 21:14:14
+ * @LastEditors: TianyuYuan
+ * @LastEditTime: 2022-05-20 22:20:01
+ */
 import NextLink from "next/link";
 import { Grid, Text } from "@nextui-org/react";
 import { Paragraph } from "../../components/Paragraph";
@@ -34,7 +42,7 @@ export function BlogCard({ id, title, description, date }: blogCardProps) {
       <NextLink href={`/blog/${id}`}>
         <div className={styles.blogDescription}>
           <Text h4 weight="medium">
-            {title}
+            {shortTitle}
           </Text>
           <Text weight="medium" color="grey" css={{ mt: "$2" }}>
             {description}
