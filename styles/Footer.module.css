@@ -15,7 +15,7 @@
     padding: 10px 1rem;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 900px) {
     .footerCenter {
         min-width: 500px;
     }
@@ -24,7 +24,7 @@
 
 /* for mobile */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .footerCenter {
         max-width: 390px;
         padding: 10px 6rem;

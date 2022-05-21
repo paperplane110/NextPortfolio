@@ -5,10 +5,11 @@
 .iconBox {
     position: fixed;
     bottom: 40px;
-    right: 25px;
+    right: calc(50vw - 450px);
     z-index: 20;
     border: 1px dashed rgba(159, 159, 159, 0.8);
     border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
     height: 3rem;
     width: 3rem;
     cursor: pointer;
@@ -16,6 +17,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .iconBox {
+        right: calc(50vw - 300px)
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .iconBox {
+        right: -300px;
+    }
 }
 
 .iconBox:hover {

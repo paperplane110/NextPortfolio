@@ -12,7 +12,7 @@
     width: 800px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .content {
         padding: 4rem 1rem 10rem 1rem;
         max-width: 500px;
@@ -22,7 +22,7 @@
 
 /* for mobile */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .content {
         padding: 4rem 2rem 8rem 2rem;
         max-width: 390px;
