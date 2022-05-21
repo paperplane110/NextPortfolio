@@ -35,12 +35,27 @@ repellendus
 > quam fuga ullam, itaque ea dignissimos asperiores adipisci ad eveniet
 > repellendus
 
+## Divider
+
+This is a divider
+
+---
 ## Link
 
 链接会自动识别是内部还是外部链接，并且自动添加小图标
+
 - 网站内部链接 [Back-to-home](/)
 - 网站内部链接 [To-gallery](/gallery)
 - 网站外部链接 [Nextjs](https://nextjs.org/)
+
+以上链接对应markdown代码为
+
+```markdown
+*注意：内部链接为绝对路由地址，链接 blog 时不包含后缀 '.md'*
+- 网站内部链接 [Back-to-home](/)
+- 网站内部链接 [To-gallery](/gallery)
+- 网站外部链接 [Nextjs](https://nextjs.org/)
+```
 
 ## Code
 
