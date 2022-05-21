@@ -69,9 +69,20 @@ export function getAllBlogIds() {
   });
 }
 
-function getMetaInfo(id: string) {
-  const metaInfo = 0 // @note ! Need complete
-  return metaInfo
+/**
+ * Get the meta info for specified blog id
+ * @param id the id of blog file
+ * @returns if id is empty return {id}, else return {id, ...matterResult.data}
+ */
+export function getMetaInfo(id: string) {
+  if (id === "") return {id};
+  const fullPath = path.join(blogDirectory, `${id}.md`)
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const matterResult = matter(fileContents)
+  return {
+    id,
+    ...matterResult.data
+  }
 }
 
 export function getPreviousNextIds(id: string) {
@@ -87,8 +98,8 @@ export function getPreviousNextIds(id: string) {
   if (previousIndex >= 0) previousId = orderedIds[previousIndex]
 
   return {
-    nextId,
-    previousId,
+    nextId: getMetaInfo(nextId),
+    previousId: getMetaInfo(previousId),
   }
 }
 

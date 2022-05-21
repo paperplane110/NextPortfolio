@@ -1,4 +1,4 @@
-import { getAllBlogIds, getBlogData, getPreviousNextIds } from "../../lib/blog";
+import { getAllBlogIds, getBlogData, getMetaInfo, getPreviousNextIds } from "../../lib/blog";
 import { ColorH2 } from "../../components/Paragraph";
 import Date from "../../components/date";
 import styles from "../../styles/Blog.module.css";
@@ -30,6 +30,16 @@ export async function getStaticProps({ params }: gspProps) {
   };
 }
 
+type id2MetaInfo = {
+  id: string,
+  title: string | undefined,
+}
+
+type paginationProps = {
+  previousId: id2MetaInfo
+  nextId: id2MetaInfo
+}
+
 type blogPageProps = {
   blogData: {
     id: string;
@@ -37,14 +47,11 @@ type blogPageProps = {
     date: string;
     content: string;
   },
-  nextId: string,
-  previousId: string,
+  nextId: id2MetaInfo,
+  previousId: id2MetaInfo,
 };
 
-type paginationProps = {
-  previousId: string,
-  nextId: string,
-}
+
 const Pagination = ({ previousId, nextId }: paginationProps) => {
   return (
     <Grid.Container
@@ -53,20 +60,20 @@ const Pagination = ({ previousId, nextId }: paginationProps) => {
       justify="center"
     >
       <Grid xs={6}>
-        <NextLink href={`/blog/${previousId}`}>
+        <NextLink href={`/blog/${previousId.id}`}>
           <Card shadow={false} className={styles.paginationBtm}>
-            <Text h4>{previousId ? "👈 Previous post" : "Back to Blog.🏡"}</Text>
-            <Text color="grey">{previousId ? previousId : "This is the first post"}</Text>
+            <Text h4>{previousId.id ? "👈 Previous post" : "Back to Blog 🏡"}</Text>
+            <Text color="grey">{previousId.id ? previousId.title : "This is the first post"}</Text>
           </Card>
         </NextLink>
       </Grid>
       <Grid xs={6}>
-        <NextLink href={`/blog/${nextId}`}>
+        <NextLink href={`/blog/${nextId.id}`}>
           <Card shadow={false} style={{ alignItems: 'flex-end' }} className={styles.paginationBtm}>
             <Text h4>
-              {nextId ? "Next post 👉" : "Back to Blog 🏡"}
+              {nextId.id ? "Next post 👉" : "Back to Blog 🏡"}
             </Text>
-            <Text color="grey">{nextId ? nextId : "This is the latest post"}</Text>
+            <Text color="grey">{nextId.id ? nextId.title : "This is the latest post"}</Text>
           </Card>
         </NextLink>
       </Grid>
@@ -75,9 +82,6 @@ const Pagination = ({ previousId, nextId }: paginationProps) => {
 }
 
 export default function Blog({ blogData, nextId, previousId }: blogPageProps) {
-  console.log(`id: ${blogData.id}`);
-  console.log(`next: ${nextId}`);
-  console.log(`previous: ${previousId}`);
   return (
     <div>
       <ColorH2>{blogData.title}</ColorH2>
