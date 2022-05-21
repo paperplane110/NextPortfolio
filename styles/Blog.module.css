@@ -28,12 +28,12 @@
     padding: 1.5rem;
     border: 1px dashed rgba(209, 209, 209, 0.8);
     border-radius: 2rem;
-    box-shadow: 0 5px 20px rgba(20, 20, 20, 0.15);
+    box-shadow: 0 5px 20px rgba(20, 20, 20, 0);
     transition: box-shadow 0.2s ease-in-out;
 }
 
 .mdStyle:hover {
-    box-shadow: 0 5px 20px -5px rgba(20, 20, 20, 0);
+    box-shadow: 0 10px 30px rgba(20, 20, 20, 0.15);
 }
 
 .mdLink {
@@ -66,4 +66,14 @@
     margin-top: 0.5rem;
     text-align: center;
     color: rgba(52, 52, 52, 0.6);
+}
+
+.paginationBtm {
+    border: 1px dashed lightgrey;
+    transition: box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.paginationBtm:hover {
+    box-shadow: 0 5px 20px 0px rgba(20, 20, 20, 0.15);
 }

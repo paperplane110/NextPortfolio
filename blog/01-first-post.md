@@ -1,5 +1,5 @@
 ---
-title: "My first blog"
+title: "My First Blog"
 description: "The very first post in NextPortfolio"
 date: "2022-05-15"
 ---
